@@ -10,29 +10,29 @@
         }
     </style>
     <body>
-    <script>
-        var w = window.innerWidth;
-        var h = window.innerHeight;
-        //declare a variable for sound
-        var boing;
+        <script>
+            var w = window.innerWidth;
+            var h = window.innerHeight;
+            //declare a variable for sound
+            var boing;
 
-        //build a function to preload
-        function preload() {
-            soundFormats("mp3");
-            boing = loadSound("boing.mp3")
-        }
-
-        function setup() {
-            createCanvas(w,h);
-        }
-
-        function draw() {
-            //when spacebar presses the spacebar
-            if (keyIsDown(32)) {
-                //play the boing sound
-                boing.play()
+            //build a function to preload
+            function preload() {
+                soundFormats("mp3");
+                boing = loadSound("boing.mp3")
             }
-        }
-    </script>
+
+            function setup() {
+                createCanvas(w,h);
+            }
+
+            function draw() {
+                //when spacebar presses the spacebar
+                if (keyIsDown(32)) {
+                    //play the boing sound
+                    boing.play()
+                }
+            }
+        </script>
     </body>
 </html>
