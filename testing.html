@@ -15,7 +15,8 @@
             var h = window.innerHeight;
             //declare a variable for sound
             var boing;
-
+            //declare a variable for fireball
+            var fireball;
             //build a function to preload
             function preload() {
                 soundFormats("mp3");
@@ -24,9 +25,13 @@
 
             function setup() {
                 createCanvas(w,h);
+                fireball = loadImage("fireball.png")
             }
 
             function draw() {
+                clear()
+                //image(variable,x,y,width,height)
+                image(fireball,mouseX,mouseY,100,600)
                 //when spacebar presses the spacebar
                 if (keyIsDown(32)) {
                     //play the boing sound
