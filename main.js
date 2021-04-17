@@ -6,9 +6,9 @@ function setup() {
     createCanvas(w, h);
     background(0);
     var sprt = createSprite(width/2, height/2, 50, 50);
-    
+    spr.shapeColor = color(255);
 }
 
 function draw() {
-
+    drawSprites();
 }
