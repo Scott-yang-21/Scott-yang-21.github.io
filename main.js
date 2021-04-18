@@ -26,24 +26,12 @@ function player() {
             sprt.setSpeed(2.5, 180);
         }
 
-        else {
-            sprt.setSpeed(0, 0);
-        }
-
         if (keyIsDown(RIGHT_ARROW)) {
             sprt.setSpeed(2.5, 0);
         }
 
-        else {
-            sprt.setSpeed(0, 0);
-        }
-
         if (keyIsDown(UP_ARROW)) {
             sprt.setSpeed(2.5, 270);
-        }
-
-        else {
-            sprt.setSpeed(0, 0);
         }
 
         if (keyIsDown(DOWN_ARROW)) {
@@ -53,5 +41,6 @@ function player() {
         else {
             sprt.setSpeed(0, 0);
         }
+
     }
 }
