@@ -8,7 +8,6 @@ function setup() {
     background(0);
     //galaxy = loadImage("galaxy.png")
     //image(galaxy, w/2, h/2, width, height)
-    player.update();
     var sprt = createSprite(h/2, w/2, 50, 50);
     sprt.shapeColor = color(255);
     player = new player();
@@ -16,6 +15,7 @@ function setup() {
 
 function draw() {
     drawSprites();
+    player.update();
 }
 
 function player() {
