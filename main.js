@@ -1,6 +1,6 @@
 var h = window.innerHeight
 var w = window.innerWidth
-//var player;
+var player;
 var sprt;
 
 function setup() {
@@ -8,10 +8,10 @@ function setup() {
     background("galaxy.png");
     galaxy = loadImage("galaxy.png")
     //image(galaxy, w/2, h/2, width, height)
-    //player.update();
-    var sprt = createSprite(height/2, width/2, 50, 50);
+    player.update();
+    var sprt = createSprite(h/2, w/2, 50, 50);
     sprt.shapeColor = color(255);
-    //player = new player();
+    player = new player();
 }
 
 function draw() {
@@ -21,7 +21,37 @@ function draw() {
 function player() {
     this.x = w/2;
     this.y = h/2;
-    //this.update = function() {
-        
-    //}
+    this.update = function() {
+        if (keyIsDown(LEFT_ARROW)) {
+            sprt.setSpeed(2.5, 180);
+        }
+
+        else {
+            sprt.setSpeed(0, 0);
+        }
+
+        if (keyIsDown(RIGHT_ARROW)) {
+            sprt.setSpeed(2.5, 0);
+        }
+
+        else {
+            sprt.setSpeed(0, 0);
+        }
+
+        if (keyIsDown(UP_ARROW)) {
+            sprt.setSpeed(2.5, 270);
+        }
+
+        else {
+            sprt.setSpeed(0, 0);
+        }
+
+        if (keyIsDown(DOWN_ARROW)) {
+            sprt.setSpeed(2.5, 90);
+        }
+
+        else {
+            sprt.setSpeed(0, 0);
+        }
+    }
 }
