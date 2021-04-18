@@ -5,8 +5,8 @@ var sprt;
 
 function setup() {
     createCanvas(w, h);
-    background("galaxy.png");
-    galaxy = loadImage("galaxy.png")
+    background(0);
+    //galaxy = loadImage("galaxy.png")
     //image(galaxy, w/2, h/2, width, height)
     player.update();
     var sprt = createSprite(h/2, w/2, 50, 50);
