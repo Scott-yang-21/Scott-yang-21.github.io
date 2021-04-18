@@ -5,9 +5,9 @@ var sprt;
 
 function setup() {
     createCanvas(w, h);
-    background(0);
+    background("galaxy.png");
     galaxy = loadImage("galaxy.png")
-    image(galaxy, w/2, h/2, width, height)
+    //image(galaxy, w/2, h/2, width, height)
     //player.update();
     var sprt = createSprite(height/2, width/2, 50, 50);
     sprt.shapeColor = color(255);
