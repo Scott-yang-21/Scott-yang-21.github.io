@@ -38,10 +38,10 @@ function player() {
             sprt.setSpeed(2.5, 90);
         }
 
-        else {
+        /*else {
             sprt.velocity.y = 0;
             sprt.velocity.x = 0;
-        }
+        }*/
 
     }
 }
