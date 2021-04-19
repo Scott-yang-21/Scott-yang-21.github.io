@@ -39,7 +39,8 @@ function player() {
         }
 
         else {
-            sprt.setSpeed(0, 0);
+            sprt.velocity.y = 0;
+            sprt.velocity.x = 0;
         }
 
     }
