@@ -10,10 +10,10 @@ var circ;
 var r_circle;
 var wave = 1;
 var death_status = 0;
+var startup = 0;
 
 function setup() {
   createCanvas(w, h);
-  
 
   circ = loadImage('Circle_Blue.png');
   r_circle = loadImage('Circle_Red4.png');
@@ -55,22 +55,37 @@ function setup() {
 function draw() {
   background(0);
   
-  boss.revive();
-  drawSprites();
-  boss.update();
-  tentacles.displace(tentacles);
-  player.border();
-  player.movement();
-  player.shoot();
-  player.death();
-  boss.b_life();
-  boss.b_move();
-  boss.b_border();
+  if ((startup == 0)&&(keyCode!=75)) {
+    fill(255);  
+    textSize(75);
+    textAlign(CENTER, CENTER);
+    text("DARWINISM", width/2, height*0.2);
+    textSize(25);
+    text("Avoid being hit by the snake", width/2, height*0.35);
+    text("Avoid shooting the Blue", width/2, height*0.4);
+    text("Shoot the Red", width/2, height*0.45);
+    text("Press 'k' to start", width/2, height*0.55)
+    
+  }
+  else {
+    startup = 1;
+    boss.revive();
+    drawSprites();
+    boss.update();
+    tentacles.displace(tentacles);
+    player.border();
+    player.movement();
+    player.shoot();
+    player.death();
+    boss.b_life();
+    boss.b_move();
+    boss.b_border();
   
-  textSize(25);
-  fill(255);
-  textAlign(CENTER, CENTER);
-  text("Wave: "+wave, width/2, h/20);
+    textSize(25);
+    fill(255);
+    textAlign(CENTER, CENTER);
+    text("Wave: "+wave, width/2, h/20);
+  }
 }
 
 function player() {
@@ -132,6 +147,8 @@ function player() {
         textSize(75);
         textAlign(CENTER, CENTER);
         text("Game Over", width/2, height/2);
+        textSize(25);
+        text("reload page to play again", width/2, height*0.6)
         death_status = 1;
         
       }
@@ -157,7 +174,7 @@ function boss() {
       }
        for (var i = 1; i<tentacles.length; i++) {
          if (bullets.overlap(tentacles[i])) {
-           tentacles[i].scale += 0.05;
+           tentacles[i].scale += 0.025;
            this.hp1[i] += 1;
            bullets[0].remove();
          }
