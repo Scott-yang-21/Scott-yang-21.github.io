@@ -15,9 +15,9 @@ function setup() {
   createCanvas(w, h);
   
 
-  circ = loadImage('libraries/Circle_Blue.png');
-  r_circle = loadImage('libraries/Circle_Red4.png');
-  arrow = loadImage('libraries/arrow.png')
+  circ = loadImage('Circle_Blue.png');
+  r_circle = loadImage('Circle_Red4.png');
+  arrow = loadImage('arrow.png')
   sprt = createSprite(width/2, height/3);
   sprt.addImage(arrow);
   sprt.scale = 0.1;
