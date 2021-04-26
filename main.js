@@ -33,7 +33,7 @@ function setup() {
   var sprtb = createSprite(200+(100*i), h/2);
   sprtb.addImage(r_circle);
   sprtb.setCollider('circle', 0, 0, 275);
-  sprtb.scale = 0.25;
+  sprtb.scale = 0.3;
   sprtb.mass = sprtb.scale;
   tentacles.add(sprtb);
 
@@ -41,7 +41,7 @@ function setup() {
     var sprtb = createSprite(200+(100*i), h/2);
     sprtb.addImage(circ);
     sprtb.setCollider('circle', 0, 0, 340);
-    sprtb.scale = 0.25;
+    sprtb.scale = 0.3;
     sprtb.mass = sprtb.scale;
     tentacles.add(sprtb);
   }
@@ -157,7 +157,7 @@ function player() {
 }
 
 function boss() {
-  this.hp1 = [4, 4, 4, 4];
+  this.hp1 = [3, 3, 3, 3];
   this.b_life = function() {
 
     if (tentacles[0] != undefined) {
@@ -174,7 +174,7 @@ function boss() {
       }
        for (var i = 1; i<tentacles.length; i++) {
          if (bullets.overlap(tentacles[i])) {
-           tentacles[i].scale += 0.025;
+           tentacles[i].scale += 0.05;
            this.hp1[i] += 1;
            bullets[0].remove();
          }
@@ -182,7 +182,7 @@ function boss() {
     }
     
     if (this.hp1[0] == undefined) {
-      this.hp1 = [4, 4, 4, 4];
+      this.hp1 = [3, 3, 3, 3];
     }
   }
   
@@ -212,7 +212,7 @@ function boss() {
       var sprtb = createSprite(200+(100*i), sprt.position.y+600);
       sprtb.addImage(r_circle);
       sprtb.setCollider('circle', 0, 0, 275);
-      sprtb.scale = 0.25;
+      sprtb.scale = 0.3;
       sprtb.mass = sprtb.scale;
       tentacles.add(sprtb);
   
@@ -220,7 +220,7 @@ function boss() {
         var sprtb = createSprite(200+(100*i), sprt.position.y+600);
         sprtb.addImage(circ);
         sprtb.setCollider('circle', 0, 0, 340);
-        sprtb.scale = 0.25;
+        sprtb.scale = 0.3;
         sprtb.mass = sprtb.scale;
         tentacles.add(sprtb);
       }
