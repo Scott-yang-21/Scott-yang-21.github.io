@@ -15,9 +15,9 @@ var startup = 0;
 function setup() {
   createCanvas(w, h);
 
-  circ = loadImage('Circle_Blue.png');
-  r_circle = loadImage('Circle_Red4.png');
-  arrow = loadImage('arrow.png')
+  circ = loadImage('https://scott-yang-21.github.io/Circle_Blue.png');
+  r_circle = loadImage('https://scott-yang-21.github.io/Circle_Red4.png');
+  arrow = loadImage('https://scott-yang-21.github.io/arrow.png')
   sprt = createSprite(width/2, height/3);
   sprt.addImage(arrow);
   sprt.scale = 0.1;
