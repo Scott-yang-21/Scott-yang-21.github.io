@@ -18,7 +18,7 @@ function setup() {
   circ = loadImage('https://scott-yang-21.github.io/Circle_Blue.png');
   r_circle = loadImage('https://scott-yang-21.github.io/Circle_Red4.png');
   arrow = loadImage('https://scott-yang-21.github.io/arrow.png')
-  sprt = createSprite(width/2, height/3);
+  sprt = createSprite(width/2, height);
   sprt.addImage(arrow);
   sprt.scale = 0.1;
   sprt.maxSpeed = 9;
@@ -38,7 +38,7 @@ function setup() {
   tentacles.add(sprtb);
 
   for (var i = 1; i<4; i++) {
-    var sprtb = createSprite(200+(100*i), h/2);
+    var sprtb = createSprite(200+(100*i), height);
     sprtb.addImage(circ);
     sprtb.setCollider('circle', 0, 0, 340);
     sprtb.scale = 0.3;
