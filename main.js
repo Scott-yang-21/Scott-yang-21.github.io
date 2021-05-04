@@ -15,9 +15,9 @@ var startup = 0;
 function setup() {
   createCanvas(w, h);
 
-  circ = loadImage('libraries/Circle_Blue.png');
-  r_circle = loadImage('libraries/Circle_Red4.png');
-  arrow = loadImage('libraries/arrow.png')
+  circ = loadImage('https://scott-yang-21.github.io/Circle_Blue.png');
+  r_circle = loadImage('https://scott-yang-21.github.io/Circle_Red4.png');
+  arrow = loadImage('https://scott-yang-21.github.io/arrow.png')
   sprt = createSprite(width/2, height/2);
   sprt.addImage(arrow);
   sprt.scale = 0.1;
@@ -56,7 +56,7 @@ function draw() {
   background(0);
   
   if ((startup == 0)&&(keyCode!=75)) {
-    fill(255);
+    fill(255);  
     textSize(75);
     textAlign(CENTER, CENTER);
     text("DARWINISM", width/2, height*0.2);
@@ -64,9 +64,7 @@ function draw() {
     text("Avoid being hit by the snake", width/2, height*0.35);
     text("Avoid shooting the Blue", width/2, height*0.4);
     text("Shoot the Red", width/2, height*0.45);
-    text("Control Character with Arrow Keys", width/2, height*0.5)
-    text("Press SPACEBAR to Shoot", width/2, height*0.55)
-    text("Press 'k' to start", width/2, height*0.65)
+    text("Press 'k' to start", width/2, height*0.55)
     
   }
   else {
