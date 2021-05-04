@@ -64,7 +64,9 @@ function draw() {
     text("Avoid being hit by the snake", width/2, height*0.35);
     text("Avoid shooting the Blue", width/2, height*0.4);
     text("Shoot the Red", width/2, height*0.45);
-    text("Press 'k' to start", width/2, height*0.55)
+    text("Control Character with Arrow Keys", width/2, height*0.55)
+    text("Press SPACEBAR to Shoot", width/2, height*0.6)
+    text("Press 'k' to start", width/2, height*0.7)
     
   }
   else {
