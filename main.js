@@ -153,7 +153,7 @@ function restart() {
 
     for (var y=0; y<tentacles.length; y++) {
       tentacles[y].position.x = 200+(150*y); //changed '100' to '150'
-      tentacles[y].position.y = height;
+      tentacles[y].position.y = height*1.2;
       tentacles[y].scale = 0.3;
       tentacles[y].maxSpeed = 5;
       boss.drag = 0.2
