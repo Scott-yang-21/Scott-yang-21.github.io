@@ -59,10 +59,11 @@ function draw() {
   background(0);
   
   if ((startup == 0)&&(keyCode!=75)) {
-    fill(255);  
+    fill('red');  
     textSize(75);
     textAlign(CENTER, CENTER);
     text("DARWINISM", width/2, height*0.2);
+    fill(255);
     textSize(25);
     text("Avoid being hit by the snake", width/2, height*0.35);
     text("Avoid shooting the Blue", width/2, height*0.4);
@@ -166,7 +167,7 @@ function restart() {
 
   this.goal = function() {
     if (goal == 0) {
-      fill(255);  
+      fill('yellow');  
       textSize(25);
       textAlign(CENTER, CENTER);
       if (this.progress < wave) {
